@@ -1,0 +1,445 @@
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Background */
+  --bg-main: #0b1220;
+  --bg-card: #121a2f;
+  --bg-soft: #1a2442;
+
+  /* Primary colors */
+  --primary: #7dd3fc; /* biru muda */
+  --primary-soft: #38bdf8;
+
+  --accent: #f9a8d4; /* pink */
+  --accent-soft: #ec4899;
+
+  /* Text */
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  /* Status */
+  --danger: #fb7185;
+  --success: #34d399;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/* =====================
+   HEADINGS
+===================== */
+h1,
+h2,
+h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+  color: var(--primary-soft);
+}
+
+/* =====================
+   LOGIN CONTAINER
+===================== */
+.login-container {
+  background: linear-gradient(145deg, #1f1f1f, #141414);
+  padding: 45px 55px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 700px;
+  margin: 80px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8),
+    inset 0 0 0 1px rgba(255, 215, 0, 0.08);
+}
+
+.welcome-text {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.sub-text {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+/* =====================
+   FORM
+===================== */
+form {
+  background: var(--bg-card);
+  padding: 25px 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  margin-bottom: 30px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #111;
+  color: var(--text-main);
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(241, 196, 15, 0.25);
+}
+
+/* =====================
+   CERAMIC GLASS BUTTON
+===================== */
+button,
+.btn-primary,
+.btn-success,
+.btn-danger,
+.btn-outline {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+
+  /* glass ceramic */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(241, 196, 15, 0.4);
+  color: #f1c40f;
+
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25),
+    0 8px 20px rgba(0, 0, 0, 0.6);
+
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+button:hover,
+.btn-primary:hover,
+.btn-success:hover,
+.btn-danger:hover,
+.btn-outline:hover {
+  background: rgb(240, 240, 238);
+  color: #e83a3a;
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.4),
+    0 12px 25px rgba(0, 0, 0, 0.8);
+}
+
+/* Click */
+button:active {
+  transform: scale(0.97);
+}
+
+/* =====================
+   VARIANT WARNA HALUS
+===================== */
+button,
+.btn-primary,
+.btn-success,
+.btn-danger,
+.btn-outline {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(125, 211, 252, 0.5);
+  color: var(--primary);
+
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25),
+    0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.868);
+  color: #ff2e2e;
+}
+
+.btn-outline {
+  border-color: rgba(249, 168, 212, 0.6);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: rgba(249, 168, 212, 0.4);
+  color: #000;
+}
+
+/* =====================
+   TABLE
+===================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+th {
+  background: #000;
+  color: var(--gold);
+  padding: 14px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #2a2a2a;
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+tr:hover {
+  background: #222;
+}
+
+/* =====================
+   CHAT
+===================== */
+.chat-box {
+  background: #0c0c0c;
+  border: 1px solid #333;
+  border-radius: 14px;
+  padding: 15px;
+  height: 260px;
+  overflow-y: auto;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.chat-box p {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.chat-box strong {
+  color: var(--primary);
+}
+
+/* =====================
+   STATUS BADGE
+===================== */
+.status.pending {
+  background: var(--primary);
+  color: #000;
+}
+
+.status.accepted {
+  background: var(--success);
+  color: #000;
+}
+
+.status.rejected {
+  background: var(--danger);
+  color: #000;
+}
+
+/* =====================
+   LOGOUT BUTTON
+===================== */
+.logout-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+
+  z-index: 9999; /* INI KUNCI UTAMA */
+
+  width: auto;
+  padding: 10px 18px;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(15, 151, 241, 0.5);
+  color: #f10f69;
+
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25),
+    0 10px 25px rgba(0, 0, 0, 0.8);
+
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: rgba(241, 15, 15, 0.81);
+  color: #000;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .login-container {
+    margin: 40px auto;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+/* =====================
+   PAGE TRANSITION
+===================== */
+.page {
+  animation: pageIn 0.6s ease forwards;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* fade out sebelum pindah */
+.fade-out {
+  animation: pageOut 0.4s ease forwards;
+}
+
+@keyframes pageOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+}
+
+/* ===== BASE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== DASHBOARD LAYOUT ===== */
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===== GRID RESPONSIVE ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+  padding: 20px;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(173, 216, 230, 0.25),
+    rgba(255, 182, 193, 0.25)
+  );
+
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* ===== BUTTON ===== */
+button {
+  padding: 10px 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  h1,
+  h2 {
+    font-size: 18px;
+  }
+
+  .dashboard {
+    padding: 15px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .logout-btn {
+    bottom: 15px;
+    left: 15px;
+    font-size: 12px;
+  }
+}
